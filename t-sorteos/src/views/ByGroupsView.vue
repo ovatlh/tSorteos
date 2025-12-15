@@ -10,44 +10,47 @@ function fnFormSubmit() {
 </script>
 
 <template>
-  <section>
-    <h1>Groups</h1>
-    <form @submit.prevent="fnFormSubmit">
-      <input type="number" name="txt-size" id="id-size" placeholder="Groups size: example = 5" required>
-      <button type="submit">Generate groups</button>
-    </form>
-  </section>
+  <section class="content-view">
+    <section class="form-container">
+      <h1>Groups</h1>
 
-  <section>
-    <h2>List</h2>
+      <form @submit.prevent="fnFormSubmit">
+        <input type="number" name="txt-size" id="id-size" placeholder="Groups size: example = 5" required>
 
-    <div class="group-container">
-      <div class="group-item-container" v-for="(group, groupIndex) in usersStore.fnGetGroupList()">
+        <button type="submit">Generate groups</button>
+      </form>
+    </section>
+
+    <section class="preview-container">
+      <h2>List</h2>
+
+      <section class="group-item-container" v-for="(group, groupIndex) in usersStore.fnGetGroupList()">
         <h3>Group #{{ groupIndex + 1 }}</h3>
 
-        <div class="group-list-container">
+        <div class="group-list-item-container">
           <p v-for="(item, itemIndex) in group.userList">{{ itemIndex + 1 }}: {{ item }}</p>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   </section>
 </template>
 
 <style scoped>
-.group-container {
-  padding: 0.5em;
+.group-item-container {
   display: grid;
   grid-auto-flow: row;
   align-content: start;
-  row-gap: 2em;
+  padding: 0.5em;
+  gap: 0.5em;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.group-list-container {
-  padding: 0.5em;
+.group-list-item-container {
   display: grid;
   grid-auto-flow: row;
   align-content: start;
+  padding: 0.5em;
+  gap: 0.5em;
   background-color: rgba(0, 0, 0, 0.1);
 }
 </style>

@@ -12,18 +12,22 @@
 </template>
 
 <style scoped>
-nav a.router-link-exact-active {
-  color: var(--color-text);
+nav {
+  display: flex;
+  justify-content: start;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+nav a.router-link-exact-active {
+  color: var(--clr-green-01);
+  text-decoration: underline;
 }
 
 nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 3em;
+  padding: 0 1.5em;
 }
 
 nav a:first-of-type {

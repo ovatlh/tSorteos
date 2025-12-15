@@ -26,11 +26,12 @@ export const useUsersStore = defineStore("Users", () => {
   }
 
   function fnSetUserList(txtList: string[]) {
-    const tempList = shuffleArray(txtList);
+    const randomList = shuffleArray(txtList);
     userList.value = [];
-    userList.value = tempList;
+    userList.value = txtList;
     userListToSelect.value = [];
-    userListToSelect.value = tempList;
+    userListToSelect.value = randomList;
+    userListSelected.value = [];
   }
 
   function fnSetNewUserGroups(usersPerGroup: number) {
