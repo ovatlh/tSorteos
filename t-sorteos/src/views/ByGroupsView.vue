@@ -34,23 +34,6 @@ function fnFormSubmit() {
 </template>
 
 <style scoped>
-form {
-  display: grid;
-  grid-auto-flow: row;
-  row-gap: 1em;
-}
-
-input[type="number"] {
-  width: 100%;
-  padding: 1em;
-  field-sizing: content;
-}
-
-button {
-  padding: 0.5em;
-  cursor: pointer;
-}
-
 .group-container {
   padding: 0.5em;
   display: grid;

@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/bygroup',
       name: 'bygroup',
       component: () => import('../views/ByGroupsView.vue'),
+    },
+    {
+      path: '/selectone',
+      name: 'selectone',
+      component: () => import('../views/SelectOneView.vue'),
     }
   ],
 })

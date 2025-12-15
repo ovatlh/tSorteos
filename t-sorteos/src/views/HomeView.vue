@@ -1,9 +1,5 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <section>
+    <h1>Page with a simple system for making a raffle with users</h1>
+  </section>
 </template>

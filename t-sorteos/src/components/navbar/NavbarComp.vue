@@ -7,6 +7,7 @@
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/users">Users</RouterLink>
     <RouterLink to="/bygroup">Groups</RouterLink>
+    <RouterLink to="/selectone">Select one</RouterLink>
   </nav>
 </template>
 
