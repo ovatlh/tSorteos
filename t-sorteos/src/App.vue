@@ -6,7 +6,9 @@ import NavbarComp from "./components/navbar/NavbarComp.vue";
 <template>
   <NavbarComp />
 
-  <RouterView />
+  <main class="view-container">
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
